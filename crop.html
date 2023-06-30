@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>| Sri Vijaya Durga Solution's |</title>
+        <link rel="icon" href="img/svds_logo.png" sizes="32x32">
+        <link rel="stylesheet" type="text/css" href="css/crop_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/6db30766d3.js" crossorigin="anonymous"></script>
+        
+    </head>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <i class="text-white fa-sharp fa-regular fa-calendar-days ml-auto mr-3">
+                    <span class="date text-white ml-2"></span>
+                </i>
+                <i class="text-white fa-sharp fa-regular fa-clock ml-3 mr-auto">
+                    <span class="time text-white ml-2"></span>
+                </i>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/svds_logo.png" width="100" height="30" alt="" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="crop.html">Image Crop <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#">Disabled</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="bg_container container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-12 text-center mb-5">
+                    <h3 class="head">Image or Signature Cropping Tool</h3>
+                </div>
+                <div class="col-12 col-md-6 mt-3 mb-3">
+                    <div class="bg-success p-3">
+                        <div class="text-center mb-3">
+                            <h5 class="text-white txt">Image Cropping</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageInput" class="txt">Select an image:</label>
+                            <input type="file" class="form-control-file" id="imageInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageFormat"  class="txt">Image Format:</label>
+                            <select class="form-control" id="imageFormat">
+                                <option value="jpg">JPG</option>
+                                <option value="jpeg">JPEG</option>
+                                <option value="png">PNG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageWidth" class="txt">Required Width (pixels):</label>
+                            <input type="number" class="form-control" id="imageWidth" value="213">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageHeight" class="txt">Required Height (pixels):</label>
+                            <input type="number" class="form-control" id="imageHeight" value="213">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageDPI" class="txt">Required DPI:</label>
+                            <input type="number" class="form-control" id="imageDPI" value="300">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" id="cropImageButton" disabled>Crop Image</button>
+                        </div>
+                        <div class="text-center img_prev mt-3" id="imagePreviewContainer"></div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="downloadimagebutton btn btn-primary" id="downloadButton">Download Image</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-3 mb-3">
+                    <div class="bg-success p-3">
+                        <div class="text-center  mb-3">
+                            <h5 class="text-white txt">Signature Cropping</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="signatureInput" class="txt">Select a signature:</label>
+                            <input type="file" class="form-control-file" id="signatureInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="signatureFormat" class="txt">Signature Format:</label>
+                            <select class="form-control" id="signatureFormat">
+                                <option value="jpg">JPG</option>
+                                <option value="jpeg">JPEG</option>
+                                <option value="png">PNG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="signatureWidth" class="txt">Required Width (pixels):</label>
+                            <input type="number" class="form-control" id="signatureWidth" value="400">
+                        </div>
+                        <div class="form-group">
+                            <label for="signatureHeight" class="txt">Required Height (pixels):</label>
+                            <input type="number" class="form-control" id="signatureHeight" value="200">
+                        </div>
+                        <div class="form-group">
+                            <label for="signatureDPI" class="txt">Required DPI:</label>
+                            <input type="number" class="form-control" id="signatureDPI" value="600">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" id="cropSignatureButton" disabled>Crop Signature</button>
+                        </div>
+                        <div class="text-center img_prev mt-3" id="signaturePreviewContainer"></div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="downloadsignaturebutton btn btn-primary" id="downloadButton">Download Signature</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer class="bg-primary mt-5 text-white text-center py-3">
+        <hr class="hr"/>
+        <p>&copy; 2023 My Blog. All rights reserved.</p>
+    </footer>
+    
+    <!-- Include jQuery and Cropper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+    <!-- Croppint tool script -->
+    <script>
+        function initializeCropper(inputElement, previewContainerId, cropButtonId, widthInputId, heightInputId, dpiInputId, formatSelectId, defaultWidth, defaultHeight, defaultDPI) {
+            var previewContainer = document.getElementById(previewContainerId);
+            var cropButton = document.getElementById(cropButtonId);
+            var widthInput = document.getElementById(widthInputId);
+            var heightInput = document.getElementById(heightInputId);
+            var dpiInput = document.getElementById(dpiInputId);
+            var formatSelect = document.getElementById(formatSelectId);
+            var image = new Image();
+            var cropper;
+
+            inputElement.addEventListener('change', function(event) {
+                var file = event.target.files[0];
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    image.src = event.target.result;
+                    image.onload = function() {
+                        if (cropper) {
+                            cropper.destroy();
+                        }
+
+                        previewContainer.innerHTML = '';
+
+                        var img = document.createElement('img');
+                        img.src = image.src;
+                        img.id = 'croppedImage';
+                        previewContainer.appendChild(img);
+
+                        cropper = new Cropper(img, {
+                            aspectRatio: widthInput.value / heightInput.value,
+                            viewMode: 1,
+                            movable: false,
+                            zoomable: false,
+                            rotatable: false,
+                            scalable: false,
+                        });
+
+                        cropButton.disabled = false;
+                    };
+                };
+
+                reader.readAsDataURL(file);
+            });
+
+            cropButton.addEventListener('click', function() {
+                var requiredWidth = parseInt(widthInput.value);
+                var requiredHeight = parseInt(heightInput.value);
+                var requiredDPI = parseInt(dpiInput.value);
+                var croppedCanvas = cropper.getCroppedCanvas({ width: requiredWidth, height: requiredHeight });
+
+                // Calculate the scaling factor for DPI
+                var scalingFactor = requiredDPI / 96; // Assuming a default screen DPI of 96
+
+                // Create a new image element for the cropped image
+                var croppedImage = new Image();
+                croppedImage.src = croppedCanvas.toDataURL(`image/${formatSelect.value}`, scalingFactor);
+                croppedImage.className = 'img-fluid rounded';
+
+                // Create a download button for the cropped image
+                var downloadButton = document.querySelector('.downloadimagebutton');
+                downloadButton.href = croppedImage.src;
+                downloadButton.download = `cropped_image.${formatSelect.value}`;
+
+                // Create a download button for the cropped image
+                var downloadButton = document.querySelector('.downloadsignaturebutton');
+                downloadButton.href = croppedImage.src;
+                downloadButton.download = `cropped_image.${formatSelect.value}`;
+
+                // Display the cropped image and download button
+                previewContainer.innerHTML = '';
+                previewContainer.appendChild(croppedImage);
+            });
+        }
+
+        // Initialize image cropper
+        var imageInput = document.getElementById('imageInput');
+        var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        var cropImageButton = document.getElementById('cropImageButton');
+        var imageWidthInput = document.getElementById('imageWidth');
+        var imageHeightInput = document.getElementById('imageHeight');
+        var imageDPIInput = document.getElementById('imageDPI');
+        var imageFormatSelect = document.getElementById('imageFormat');
+        initializeCropper(imageInput, 'imagePreviewContainer', 'cropImageButton', 'imageWidth', 'imageHeight', 'imageDPI', 'imageFormat', imageWidthInput.value, imageHeightInput.value, imageDPIInput.value);
+
+        // Initialize signature cropper
+        var signatureInput = document.getElementById('signatureInput');
+        var signaturePreviewContainer = document.getElementById('signaturePreviewContainer');
+        var cropSignatureButton = document.getElementById('cropSignatureButton');
+        var signatureWidthInput = document.getElementById('signatureWidth');
+        var signatureHeightInput = document.getElementById('signatureHeight');
+        var signatureDPIInput = document.getElementById('signatureDPI');
+        var signatureFormatSelect = document.getElementById('signatureFormat');
+        initializeCropper(signatureInput, 'signaturePreviewContainer', 'cropSignatureButton', 'signatureWidth', 'signatureHeight', 'signatureDPI', 'signatureFormat', signatureWidthInput.value, signatureHeightInput.value, signatureDPIInput.value);
+    </script>
+
+    <!-- Get the current date in the format "day-month-year -->
+    <script>
+        // Get the current date in the format "day-month-year"
+        function getCurrentDate() {
+            var currentDateTime = new Date();
+            var day = currentDateTime.getDate();
+            var month = currentDateTime.getMonth() + 1;
+            var year = currentDateTime.getFullYear();
+            return day + '-' + month + '-' + year;
+        }
+
+        // Update the date element
+        function updateDateElement() {
+            var dateElement = document.querySelector('.date');
+            if (dateElement) {
+                dateElement.textContent = getCurrentDate();
+            }
+        }
+
+        // Initial update on page load
+        updateDateElement();
+    </script>
+
+    <!-- Get the current time in 12-hour format -->
+    <script>
+        // Get the current time in 12-hour format
+        function getCurrentTime() {
+            var currentDateTime = new Date();
+            var hours = currentDateTime.getHours();
+            var minutes = currentDateTime.getMinutes();
+            var amOrPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            return hours + ':' + minutes + ' ' + amOrPm;
+        }
+
+        // Update the time element
+        function updateTimeElement() {
+            var timeElement = document.querySelector('.time');
+            if (timeElement) {
+                timeElement.textContent = getCurrentTime();
+            }
+        }
+
+        // Update the time element every second
+        setInterval(updateTimeElement, 1000);
+    </script>
+
+
+</html>
