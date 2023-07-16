@@ -1,0 +1,56 @@
+.bg-col{
+    background-color: #425d80;
+    text-align: center;
+}
+
+.bg-colo{
+    background-color: #2A4467;
+}
+
+.scrolling-headline{
+    background-color: #425d80;
+}
+
+.brand-name{
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.icon-col{
+    color: #fff;
+    font-size: 25px;
+}
+
+.hr{
+    border-color: #fff;
+}
+
+.scrolling-headline {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.scrol-txt{
+    color: rgb(255, 255, 255);
+}
+
+.img{
+    height: 60px;
+}
+
+.card-section{
+    align-items: center;
+    padding: 10px;
+}
+
+#bg-bt{
+    background-color: #425d80;
+    color: #fff;
+    font-family: "Roboto";
+    font-weight: 400;
+}
