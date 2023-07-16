@@ -1,3 +1,25 @@
+.bg-col{
+    background-color: #425d80;
+    text-align: center;
+}
+
+.bg-colo{
+    background-color: #2A4467;
+}
+
+.scrolling-headline{
+    background-color: #425d80;
+}
+
+.brand-name{
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.icon-col{
+    color: #fff;
+    font-size: 25px;
+}
 
 .hr{
     border-color: #fff;
@@ -14,7 +36,7 @@
 }
 
 .scrol-txt{
-    color: rgb(34, 180, 34);
+    color: rgb(255, 255, 255);
 }
 
 .img{
@@ -24,4 +46,11 @@
 .card-section{
     align-items: center;
     padding: 10px;
+}
+
+#bg-bt{
+    background-color: #425d80;
+    color: #fff;
+    font-family: "Roboto";
+    font-weight: 400;
 }
