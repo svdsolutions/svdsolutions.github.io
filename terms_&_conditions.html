@@ -16,43 +16,10 @@
     
 
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <i class="text-white fa-sharp fa-regular fa-calendar-days ml-auto mr-3">
-                        <span class="date text-white ml-2"></span>
-                    </i>
-                    <i class="text-white fa-sharp fa-regular fa-clock ml-3 mr-auto">
-                        <span class="time text-white ml-2"></span>
-                    </i>
-            </nav>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/svds_logo.png" width="100" height="30" alt="" loading="lazy">
-                  </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link text-white" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="crop.html">Image Crop</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="aboutus.html">About us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="privacy_policy.html">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="terms_&_conditions.html">Terms & Conditions <span class="sr-only">(current)</span></a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
-        </header>
+      <header>
+        <div id="header"></div>
+        <div id="navbar"></div>
+    </header>
         <div class="container mt-5 mb-5">
             <div class="row">
               <h1>Terms and Conditions:</h1>
@@ -75,56 +42,12 @@
             </div>
         </div>
         
-        <footer class="bg-primary text-white text-center py-3">
-            <hr class="hr"/>
-            <p>&copy; 2023 My Blog. All rights reserved.</p>
-        </footer>
-    </body>
-
-    <script>
-    // Get the current date in the format "day-month-year"
-    function getCurrentDate() {
-        var currentDateTime = new Date();
-        var day = currentDateTime.getDate();
-        var month = currentDateTime.getMonth() + 1;
-        var year = currentDateTime.getFullYear();
-        return day + '-' + month + '-' + year;
-    }
-
-    // Update the date element
-    function updateDateElement() {
-        var dateElement = document.querySelector('.date');
-        if (dateElement) {
-            dateElement.textContent = getCurrentDate();
-        }
-    }
-
-    // Initial update on page load
-    updateDateElement();
-    </script>
-
-    <script>
-    // Get the current time in 12-hour format
-    function getCurrentTime() {
-        var currentDateTime = new Date();
-        var hours = currentDateTime.getHours();
-        var minutes = currentDateTime.getMinutes();
-        var amOrPm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        return hours + ':' + minutes + ' ' + amOrPm;
-    }
-
-    // Update the time element
-    function updateTimeElement() {
-        var timeElement = document.querySelector('.time');
-        if (timeElement) {
-            timeElement.textContent = getCurrentTime();
-        }
-    }
-
-    // Update the time element every second
-    setInterval(updateTimeElement, 1000);
-    </script>
+        <footer>
+          <div id="footer"></div>
+      </footer>
+  </body>
+  <script src="include/jquery-3.3.1.js"></script>
+  <script src="include/head&footfunction.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8942768545215603"
+   crossorigin="anonymous"></script>
 </html>

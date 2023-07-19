@@ -54,3 +54,17 @@
     font-family: "Roboto";
     font-weight: 400;
 }
+
+.bg_crop_container{
+    font-family: 'Roboto';
+}
+
+.main_head{
+    font-size: 30px;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.img_prev{
+    height: 350px;
+}

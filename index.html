@@ -12,52 +12,11 @@
     	<script src="include/bootstrap/popper.min.js"></script>
     	<script src="include/bootstrap/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/6db30766d3.js" crossorigin="anonymous"></script>
-        <script src="include/time.js"></script>
-        <script src="include/date.js"></script>
 	</head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg text-center navbar-dark bg-col">
-                <div class="col-md-3">
-                    <i class="text-white fa-sharp fa-regular fa-calendar-days mr-3">
-                        <span class="date text-white ml-2" id="date"></span>
-                    </i>
-                    <i class="text-white fa-sharp fa-regular fa-clock ml-3 ">
-                        <span class="time text-white ml-2" id="time"></span>
-                    </i>
-                </div>
-                <div class="col-md-7">
-                    <a class="navbar-brand brand-name" href="#">Sri Vijaya Durga Solution's</a>
-                </div>
-                <div class="col-md-2">
-                    <a href="https://www.facebook.com/inddpgamer" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook icon-col ml-auto mr-auto"></i></a>
-                </div>
-            </nav>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-colo">
-                
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="crop.html">Image Crop</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="aboutus.html">About us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="privacy_policy.html">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="terms_&_conditions.html">Terms & Conditions</a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+            <div id="header"></div>
+            <div id="navbar"></div>
         </header>
         <div class="container-fluid mt-2 mb-5">
             <div class="scrolling-headline">
@@ -138,12 +97,12 @@
                 </div>
             </div>
         </div>
-        <footer class="bg-colo text-white text-center py-3">
-            <hr class="hr"/>
-            <p>&copy; 2023 My Blog. All rights reserved.</p>
+        <footer>
+            <div id="footer"></div>
         </footer>
     </body>
+    <script src="include/jquery-3.3.1.js"></script>
+    <script src="include/head&footfunction.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8942768545215603"
      crossorigin="anonymous"></script>
-    <script async src="https://fundingchoicesmessages.google.com/i/pub-8942768545215603?ers=1" nonce="BQl6bcgDmjsNhvhpaxFJQg"></script><script nonce="BQl6bcgDmjsNhvhpaxFJQg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
 </html>

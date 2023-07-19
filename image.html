@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>| Sri Vijaya Durga Solution's |</title>
+		<link rel="icon" href="img/svds_logo.png" sizes="16x16" aria-label="SVDS">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
+		<link rel="stylesheet" href="include/bootstrap/bootstrap.min.css">
+    	<script src="include/bootstrap/jquery-3.5.1.slim.min.js"></script>
+    	<script src="include/bootstrap/popper.min.js"></script>
+    	<script src="include/bootstrap/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/6db30766d3.js" crossorigin="anonymous"></script>
+        <script src="include/jquery-3.3.1.js"></script>
+        <script src="include/head&footfunction.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div id="header"></div>
+            <div id="navbar"></div>
+        </header>
+        <div class="container mt-2">
+            <div class="scrolling-headline">
+                <marquee behavior="scroll" class="scrol-txt" direction="left" scrollamount="8">In this website we will provide all services at one place and it will helps the citizens to reduce the searching time.</marquee>
+            </div>
+        </div>
+        <div class="bg_crop_container container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-12 text-center mb-5">
+                    <h2 class="main_head">For Best user experience please use Google Chrome</h2>
+                </div>
+                <div class="col-12 col-md-12 text-center mb-5">
+                    <h3 class="main_head">Image or Signature Cropping Tool</h3>
+                </div>
+                <div class="col-12 col-md-12 mt-3 mb-3">
+                    <div class="bg-success p-3">
+                        <div class="text-center mb-3">
+                            <h5 class="text-white txt">Image Cropping</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageInput" class="txt">Select an image:</label>
+                            <input type="file" class="form-control-file" id="imageInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageFormat"  class="txt">Image Format:</label>
+                            <select class="form-control" id="imageFormat">
+                                <option value="jpg">JPG</option>
+                                <option value="jpeg">JPEG</option>
+                                <option value="png">PNG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageWidth" class="txt">Required Width (pixels):</label>
+                            <input type="number" class="form-control" id="imageWidth" value="213">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageHeight" class="txt">Required Height (pixels):</label>
+                            <input type="number" class="form-control" id="imageHeight" value="213">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageDPI" class="txt">Required DPI:</label>
+                            <input type="number" class="form-control" id="imageDPI" value="300">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" id="cropImageButton" disabled>Crop Image</button>
+                        </div>
+                        <div class="text-center img_prev mt-3" id="imagePreviewContainer"></div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="downloadimagebutton btn btn-primary" id="downloadButton">Download Image</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </body>
+    <script src="include/jquery-3.3.1.js"></script>
+    <script src="include/head&footfunction.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8942768545215603"
+     crossorigin="anonymous"></script>
+
+    <!-- Include jQuery and Cropper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+    <!-- Croppint tool script -->
+    <script src="include/crop/img-scr.js"></script>
+
+</html>
